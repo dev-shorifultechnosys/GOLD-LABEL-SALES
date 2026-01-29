@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Label Sales - Amazon Accelerator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111317',
+                        secondary: '#8C919A',
+                        accent: '#C9A24D',
+                        'accent-muted': '#A8873A',
+                        'bg-light': '#F2F3F5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+        
+        .hero-pattern {
+            background-image: radial-gradient(#C9A24D 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.08;
+        }
+        
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #C9A24D 0%, #A8873A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .before-after-slider {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        .before-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .after-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+            width: 50%; /* Initial state */
+            border-right: 2px solid #fff;
+        }
+        .slider-handle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            cursor: ew-resize;
+        }
+    </style>
+</head>
+<body class="font-sans text-primary bg-white antialiased selection:bg-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="header" class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-[1440px] mx-auto px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <!-- Logo -->
+                <div class="h-20 w-auto">
+                   <img src="http://leanlivingjourney.com/wp-content/uploads/2026/01/logoee-1.png" alt="Gold Label Sales" class="h-full object-contain">
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#services" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Services</a>
+                <a href="#results" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Results</a>
+                <a href="#about" class="text-sm font-medium text-secondary hover:text-primary transition-colors">About</a>
+                <a href="#contact" class="text-sm font-medium text-secondary hover:text-primary transition-colors">Contact</a>
+            </div>
+
+            <a href="#audit" class="bg-accent hover:bg-accent-muted text-white text-sm font-semibold px-6 py-3 rounded-none transition-all duration-300 shadow-lg shadow-accent/20">
+                Free Amazon Audit
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-32 pb-20 overflow-hidden w-full max-w-[1440px] mx-auto min-h-[800px] flex items-center">
+        <div class="absolute inset-0 hero-pattern pointer-events-none"></div>
+        
+        <!-- Abstract Decoration -->
+        <div class="absolute top-20 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-gray-50 to-transparent rounded-full opacity-50 -z-10 translate-x-1/3"></div>
+
+        <div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-8 relative z-10">
+                
+                <!-- Dictionary Definition Element -->
+                <div class="inline-block border-l-2 border-accent pl-4 mb-4">
+                    <p class="font-serif text-secondary italic text-lg">ac·cel·er·a·tor <span class="text-xs text-gray-400 not-italic">/akˈseləˌrādər/ noun</span></p>
+                    <p class="text-primary font-medium">Your Amazon team. Without the payroll.</p>
+                </div>
+
+                <!-- Headline Option B (Selected for Impact) -->
+                <h1 class="text-6xl md:text-7xl font-bold tracking-tight leading-[1.1] text-primary">
+                    We Run Amazon For Brands That <span class="gold-gradient-text font-serif italic pr-2">Hate</span> Running Amazon.
+                </h1>
+                
+                <p class="text-xl text-secondary max-w-2xl leading-relaxed">
+                    See the repeatable system we've used to scale 16 brands — including one from $40k to $280k/month.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#audit" class="bg-primary text-white px-8 py-4 text-base font-semibold hover:bg-gray-800 transition-all shadow-xl shadow-gray-200 flex items-center justify-center gap-2 group">
+                        Get My Free Audit
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform text-accent"></i>
+                    </a>
+                    <a href="#case-study" class="bg-white border border-gray-200 text-primary px-8 py-4 text-base font-semibold hover:border-accent hover:text-accent transition-all flex items-center justify-center">
+                        See How We Did It
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative h-[600px] flex items-center justify-center">
+                 <!-- Hero Visual: Abstract Representation of Order from Chaos -->
+                 <div class="relative w-full h-full">
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[500px] bg-gray-50 rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform rotate-3 hover:rotate-0 transition-all duration-700 ease-out z-20">
+                        <!-- Content of a 'Clean' Amazon Dashboard -->
+                        <div class="p-6 h-full flex flex-col">
+                            <div class="flex justify-between items-center mb-8 border-b border-gray-100 pb-4">
+                                <div class="w-24 h-6 bg-gray-200 rounded"></div>
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600"><i class="fa-solid fa-check text-xs"></i></div>
+                            </div>
+                            <div class="space-y-4 flex-grow">
+                                <div class="flex gap-4 items-end h-40">
+                                    <div class="w-1/5 bg-accent/20 h-[40%] rounded-t-sm"></div>
+                                    <div class="w-1/5 bg-accent/40 h-[60%] rounded-t-sm"></div>
+                                    <div class="w-1/5 bg-accent/60 h-[50%] rounded-t-sm"></div>
+                                    <div class="w-1/5 bg-accent/80 h-[85%] rounded-t-sm"></div>
+                                    <div class="w-1/5 bg-accent h-[100%] rounded-t-sm relative group">
+                                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-primary text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                                            $280k
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-8 space-y-3">
+                                    <div class="flex justify-between items-center p-3 bg-gray-50 rounded border border-gray-100">
+                                        <span class="text-xs font-semibold text-gray-500">Buy Box Win Rate</span>
+                                        <span class="text-sm font-bold text-primary">98.2%</span>
+                                    </div>
+                                    <div class="flex justify-between items-center p-3 bg-gray-50 rounded border border-gray-100">
+                                        <span class="text-xs font-semibold text-gray-500">ACoS</span>
+                                        <span class="text-sm font-bold text-primary">22.4%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Elements behind -->
+                    <div class="absolute top-[20%] right-[10%] w-64 h-40 bg-white rounded-xl shadow-lg border border-gray-100 z-30 p-4 animate-[float_4s_ease-in-out_infinite]">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="w-8 h-8 bg-red-50 rounded-full flex items-center justify-center text-red-500"><i class="fa-solid fa-triangle-exclamation text-xs"></i></div>
+                            <span class="text-xs font-bold text-gray-400 line-through">Unauthorized Seller</span>
+                        </div>
+                        <div class="text-sm font-semibold text-primary">REMOVED</div>
+                        <div class="mt-2 h-1 w-full bg-green-500 rounded-full"></div>
+                    </div>
+
+                    <div class="absolute bottom-[20%] left-[0%] w-56 h-auto bg-primary text-white rounded-xl shadow-2xl z-30 p-5 transform -rotate-6">
+                        <div class="text-xs text-gray-400 mb-1">Monthly Revenue</div>
+                        <div class="text-2xl font-bold font-mono text-accent">+$240,000</div>
+                        <div class="text-[10px] text-gray-400 mt-1">Growth: 700%</div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section id="stats" class="bg-primary text-white py-16 w-full max-w-[1440px] mx-auto border-y border-gray-800">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-800">
+                <div class="px-4 py-2">
+                    <p class="text-4xl font-bold font-serif text-white mb-2">10 Years</p>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">Exposed To Every Amazon Problem</p>
+                </div>
+                <div class="px-4 py-2">
+                    <p class="text-4xl font-bold font-serif text-white mb-2">16+ Brands</p>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">Under Active Management</p>
+                </div>
+                <div class="px-4 py-2">
+                    <p class="text-4xl font-bold font-serif text-accent mb-2">$70M+</p>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">Sold on Amazon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="py-24 bg-white w-full max-w-[1440px] mx-auto">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="inline-block py-1 px-3 border border-red-200 bg-red-50 text-red-600 text-xs font-bold tracking-wider uppercase mb-6 rounded-sm">The Problem</span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
+                        Your Amazon Channel is <span class="bg-red-100 px-2 text-red-700">Bleeding Money</span>. Here's Why.
+                    </h2>
+                    <p class="text-lg text-secondary mb-8 leading-relaxed">
+                        You built a great brand. But Amazon? It's chaos. Unauthorized sellers are undercutting your pricing. You're losing the buy box on your own products. Your listings are a mess. And every month, you're leaving tens of thousands on the table.
+                    </p>
+                    
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 mt-1.5"></i>
+                            <span class="text-primary font-medium">Unauthorized 3P sellers destroying your margins</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 mt-1.5"></i>
+                            <span class="text-primary font-medium">Losing the buy box on your own products</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 mt-1.5"></i>
+                            <span class="text-primary font-medium">Listings that don't convert (or don't exist)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 mt-1.5"></i>
+                            <span class="text-primary font-medium">Pricing chaos across channels</span>
+                        </li>
+                    </ul>
+
+                    <p class="text-xl font-bold text-primary border-l-4 border-accent pl-4">
+                        Sound familiar? Here's what we do about it.
+                    </p>
+                </div>
+                <div class="relative h-[600px] w-full bg-gray-50 rounded-lg overflow-hidden border border-gray-100 flex items-center justify-center group">
+                    <!-- Conceptual Image: Chaos -->
+                    <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/noise-lines.png')]"></div>
+                    
+                    <!-- Lead Magnet Teaser overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10 flex flex-col justify-end p-10">
+                        <h3 class="text-white text-2xl font-bold mb-2">See your Amazon channel through our eyes.</h3>
+                        <p class="text-gray-300 mb-6">Most brands never see the revenue leaks we find in 5 minutes.</p>
+                        <button class="w-fit bg-white text-primary px-6 py-3 font-bold text-sm hover:bg-accent hover:text-white transition-colors">
+                            Reveal The Leaks
+                        </button>
+                    </div>
+
+                    <img src="https://www.alux.com/wp-content/uploads/2023/03/maxresdefault12.jpg" alt="Chaotic market" class="absolute inset-0 w-full h-full object-cover grayscale mix-blend-multiply">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section - ENHANCED ULTRA MODERN DESIGN -->
+    <section id="services" class="py-32 bg-gradient-to-br from-white via-gray-50 to-white w-full max-w-[1440px] mx-auto relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute top-20 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl"></div>
+        
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="text-center mb-20">
+                <span class="inline-block text-accent font-bold tracking-[0.3em] text-xs uppercase mb-4 px-4 py-2 bg-accent/10 rounded-full">Three Ways To Fix It</span>
+                <h2 class="text-5xl md:text-6xl font-bold text-primary mb-6">Choose Your <span class="gold-gradient-text font-serif italic">Partnership</span> Model</h2>
+                <p class="text-xl text-secondary max-w-2xl mx-auto">Select the engagement level that matches your business goals and operational capacity.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Card 1 - Brand Management -->
+                <div class="bg-white rounded-3xl p-10 border-2 border-gray-100 hover:border-accent hover:shadow-[0_20px_60px_rgba(201,162,77,0.15)] transition-all duration-500 group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                            <i class="fa-solid fa-crown text-2xl text-accent"></i>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <span class="text-xs font-bold text-accent uppercase tracking-wider">Model 01</span>
+                            <h3 class="text-3xl font-bold text-primary mb-3 mt-2">Brand Management</h3>
+                            <p class="text-base font-semibold text-primary/70">Keep Your Account. We Run Everything Else.</p>
+                        </div>
+                        
+                        <p class="text-secondary mb-8 leading-relaxed">
+                            You stay the seller of record. We take over listings, SEO, A+ content, PPC, catalog cleanup, and MAP enforcement. You keep control. We do the work.
+                        </p>
+                        
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-2 text-sm text-primary">
+                                <i class="fa-solid fa-check text-accent"></i>
+                                <span>Complete listing optimization</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-primary">
+                                <i class="fa-solid fa-check text-accent"></i>
+                                <span>Advanced PPC management</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-primary">
+                                <i class="fa-solid fa-check text-accent"></i>
+                                <span>MAP enforcement & protection</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t-2 border-gray-100 pt-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs text-gray-400 uppercase font-bold">Investment</span>
+                                <span class="text-2xl font-bold text-primary">10-15%</span>
+                            </div>
+                            <p class="text-xs text-gray-500 italic mb-6">Of Amazon Revenue</p>
+                            <button class="w-full bg-gray-100 text-primary py-3 px-6 rounded-xl font-bold hover:bg-accent hover:text-white transition-all duration-300">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Accelerator (Featured) -->
+                <div class="bg-gradient-to-br from-primary via-gray-900 to-primary rounded-3xl p-10 text-white shadow-[0_20px_60px_rgba(17,19,23,0.3)] relative overflow-hidden transform lg:scale-105 lg:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-accent text-primary text-xs font-black px-4 py-2 rounded-bl-2xl">MOST POPULAR</div>
+                    <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full -translate-x-32 translate-y-32"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-accent/50">
+                            <i class="fa-solid fa-rocket text-2xl text-white"></i>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <span class="text-xs font-bold text-accent uppercase tracking-wider">Model 02</span>
+                            <h3 class="text-3xl font-bold text-white mb-3 mt-2">Amazon Accelerator</h3>
+                            <p class="text-base font-semibold text-accent">We Buy. We Sell. You Collect Checks.</p>
+                        </div>
+                        
+                        <p class="text-gray-400 mb-8 leading-relaxed">
+                            We purchase your inventory at wholesale and become your exclusive Amazon seller. We own the pricing, the buy box, and the growth. You get paid without the headaches.
+                        </p>
+                        
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-2 text-sm text-white">
+                                <i class="fa-solid fa-check text-accent"></i>
+                                <span>Zero operational burden</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-white">
+                                <i class="fa-solid fa-check text-accent"></i>
+                                <span>Guaranteed wholesale revenue</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-white">
+                                <i class="fa-solid fa-check text-accent"></i>
+                                <span>Full channel ownership</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t-2 border-white/10 pt-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs text-gray-500 uppercase font-bold">Investment</span>
+                                <span class="text-2xl font-bold text-white">Wholesale</span>
+                            </div>
+                            <p class="text-xs text-gray-500 italic mb-6">Partnership Model</p>
+                            <button class="w-full bg-accent text-white py-3 px-6 rounded-xl font-bold hover:bg-accent-muted transition-all duration-300 shadow-lg shadow-accent/30">
+                                Get Started
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 - One-Time Fix -->
+                <div class="bg-white rounded-3xl p-10 border-2 border-gray-100 hover:border-accent hover:shadow-[0_20px_60px_rgba(201,162,77,0.15)] transition-all duration-500 group relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-32 h-32 bg-accent/5 rounded-full -translate-y-16 -translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                            <i class="fa-solid fa-screwdriver-wrench text-2xl text-primary"></i>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <span class="text-xs font-bold text-accent uppercase tracking-wider">Model 03</span>
+                            <h3 class="text-3xl font-bold text-primary mb-3 mt-2">One-Time Fix</h3>
+                            <p class="text-base font-semibold text-primary/70">Done-For-You Amazon Rebuild.</p>
+                        </div>
+                        
+                        <p class="text-secondary mb-8 leading-relaxed">
+                            Full listing overhaul, brand registry, ASIN consolidation, PPC foundation, and a strategic playbook. We fix it, hand it back, and you take it from there.
+                        </p>
+                        
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-2 text-sm text-primary">
+                                <i class="fa-solid fa-check text-accent"></i>
+                                <span>Complete account rebuild</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-primary">
+                                <i class="fa-solid fa-check text-accent"></i>
+                                <span>Strategic playbook included</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-sm text-primary">
+                                <i class="fa-solid fa-check text-accent"></i>
+                                <span>One-time investment</span>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t-2 border-gray-100 pt-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs text-gray-400 uppercase font-bold">Investment</span>
+                                <span class="text-2xl font-bold text-primary">$14,999</span>
+                            </div>
+                            <p class="text-xs text-gray-500 italic mb-6">Starting Price</p>
+                            <button class="w-full bg-gray-100 text-primary py-3 px-6 rounded-xl font-bold hover:bg-accent hover:text-white transition-all duration-300">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="bg-white rounded-3xl p-10 border-2 border-gray-100 shadow-xl">
+                <h3 class="text-2xl font-bold text-primary mb-8 text-center">What's Included</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b-2 border-gray-100">
+                                <th class="text-left py-4 px-4 text-sm font-bold text-gray-400 uppercase">Feature</th>
+                                <th class="text-center py-4 px-4 text-sm font-bold text-gray-400 uppercase">Management</th>
+                                <th class="text-center py-4 px-4 text-sm font-bold text-accent uppercase">Accelerator</th>
+                                <th class="text-center py-4 px-4 text-sm font-bold text-gray-400 uppercase">One-Time</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr class="border-b border-gray-50">
+                                <td class="py-4 px-4 text-primary font-medium">Listing Optimization</td>
+                                <td class="text-center py-4 px-4"><i class="fa-solid fa-check text-accent"></i></td>
+                                <td class="text-center py-4 px-4"><i class="fa-solid fa-check text-accent"></i></td>
+                                <td class="text-center py-4 px-4"><i class="fa-solid fa-check text-accent"></i></td>
+                            </tr>
+                            <tr class="border-b border-gray-50">
+                                <td class="py-4 px-4 text-primary font-medium">PPC Management</td>
+                                <td class="text-center py-4 px-4"><i class="fa-solid fa-check text-accent"></i></td>
+                                <td class="text-center py-4 px-4"><i class="fa-solid fa-check text-accent"></i></td>
+                                <td class="text-center py-4 px-4"><span class="text-gray-400">Setup Only</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-50">
+                                <td class="py-4 px-4 text-primary font-medium">Inventory Management</td>
+                                <td class="text-center py-4 px-4"><span class="text-gray-400">Your Team</span></td>
+                                <td class="text-center py-4 px-4"><i class="fa-solid fa-check text-accent"></i></td>
+                                <td class="text-center py-4 px-4"><span class="text-gray-400">Your Team</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-50">
+                                <td class="py-4 px-4 text-primary font-medium">Ongoing Support</td>
+                                <td class="text-center py-4 px-4"><i class="fa-solid fa-check text-accent"></i></td>
+                                <td class="text-center py-4 px-4"><i class="fa-solid fa-check text-accent"></i></td>
+                                <td class="text-center py-4 px-4"><span class="text-gray-400">30 Days</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section - ULTRA MODERN DESIGN -->
+    <section id="results" class="py-32 bg-primary text-white w-full max-w-[1440px] mx-auto relative overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="container mx-auto px-8 relative z-10">
+            <div class="text-center mb-20">
+                <span class="inline-block text-accent font-bold tracking-[0.3em] text-xs uppercase mb-4 px-4 py-2 bg-accent/20 rounded-full">Real Numbers</span>
+                <h2 class="text-5xl md:text-6xl font-bold text-white mb-6">The Results <span class="gold-gradient-text font-serif italic">Speak</span> For Themselves</h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">16 brands. Millions in revenue. Here's what happens when you let experts handle Amazon.</p>
+            </div>
+
+            <!-- Featured Case Study -->
+            <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-12 mb-16 border border-white/10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-accent text-sm font-bold uppercase tracking-wider mb-4 block">Featured Success Story</span>
+                        <h3 class="text-4xl font-bold text-white mb-6">From $40k to $280k/Month in 8 Months</h3>
+                        
+                        <div class="flex items-center gap-8 mb-8">
+                            <div>
+                                <p class="text-sm text-gray-400 uppercase mb-1">Before</p>
+                                <p class="text-3xl font-bold text-gray-400 line-through">$40k</p>
+                            </div>
+                            <div class="w-16 h-0.5 bg-accent"></div>
+                            <div>
+                                <p class="text-sm text-accent uppercase mb-1 font-bold">After</p>
+                                <p class="text-5xl font-bold text-accent">$280k</p>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="bg-accent/20 text-accent px-4 py-2 rounded-full text-sm font-bold">
+                                    +700%
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4 mb-8">
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                                <p class="text-3xl font-bold text-white mb-1">98%</p>
+                                <p class="text-xs text-gray-400 uppercase">Buy Box Win Rate</p>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                                <p class="text-3xl font-bold text-white mb-1">22%</p>
+                                <p class="text-xs text-gray-400 uppercase">ACoS</p>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                                <p class="text-3xl font-bold text-white mb-1">47</p>
+                                <p class="text-xs text-gray-400 uppercase">Listings Rebuilt</p>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                                <p class="text-3xl font-bold text-white mb-1">12</p>
+                                <p class="text-xs text-gray-400 uppercase">Sellers Removed</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="inline-flex items-center gap-2 text-accent font-bold hover:gap-4 transition-all">
+                            Read Full Case Study <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="relative h-[500px]">
+                        <img class="w-full h-full object-cover rounded-2xl shadow-2xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/86f2f05349-3a1272ce3e4aa5fccc8f.png" alt="modern ecommerce dashboard showing growth charts, revenue metrics, and analytics on computer screen, professional photography, clean aesthetic" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent rounded-2xl"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+                    <div class="text-5xl font-bold text-accent mb-4">$70M+</div>
+                    <p class="text-white font-semibold mb-2">Total Revenue Managed</p>
+                    <p class="text-sm text-gray-400">Across 16 active brand partnerships since 2016</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+                    <div class="text-5xl font-bold text-accent mb-4">287%</div>
+                    <p class="text-white font-semibold mb-2">Average Growth Rate</p>
+                    <p class="text-sm text-gray-400">First 12 months of partnership engagement</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+                    <div class="text-5xl font-bold text-accent mb-4">92%</div>
+                    <p class="text-white font-semibold mb-2">Client Retention Rate</p>
+                    <p class="text-sm text-gray-400">Brands that continue working with us year over year</p>
+                </div>
+            </div>
+
+            <!-- More Case Studies -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-accent/50 transition-all duration-300 group">
+                    <div class="flex items-start justify-between mb-6">
+                        <div>
+                            <span class="text-accent text-xs font-bold uppercase tracking-wider">Home & Garden Brand</span>
+                            <h4 class="text-2xl font-bold text-white mt-2">$120k → $340k in 6 Months</h4>
+                        </div>
+                        <div class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-bold">+283%</div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Eliminated 8 unauthorized sellers, restructured entire catalog, and implemented aggressive PPC strategy.</p>
+                    <div class="flex items-center gap-4 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line text-accent"></i>
+                            <span class="text-white">Revenue</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-shield text-accent"></i>
+                            <span class="text-white">Brand Protection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-accent/50 transition-all duration-300 group">
+                    <div class="flex items-start justify-between mb-6">
+                        <div>
+                            <span class="text-accent text-xs font-bold uppercase tracking-wider">Beauty & Wellness</span>
+                            <h4 class="text-2xl font-bold text-white mt-2">$85k → $195k in 4 Months</h4>
+                        </div>
+                        <div class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-bold">+229%</div>
+                    </div>
+                    <p class="text-gray-400 mb-6">Complete A+ content overhaul, enhanced brand store, and strategic product bundling increased AOV by 47%.</p>
+                    <div class="flex items-center gap-4 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-cart-shopping text-accent"></i>
+                            <span class="text-white">AOV +47%</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-star text-accent"></i>
+                            <span class="text-white">Rating 4.8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <button class="bg-accent hover:bg-accent-muted text-white px-10 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg shadow-accent/30">
+                    See All Case Studies
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - ULTRA MODERN DESIGN -->
+    <section id="about" class="py-32 bg-white w-full max-w-[1440px] mx-auto">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-24">
+                <div class="relative h-[600px]">
+                    <div class="absolute inset-0 bg-accent/10 rounded-3xl transform rotate-3"></div>
+                    <img class="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] object-cover rounded-3xl shadow-2xl" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3339500284-25d58fa31657ab0ca337.png" alt="professional business team analyzing data on multiple screens in modern office, confident experts, premium corporate photography" />
+                    <div class="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-xl max-w-xs">
+                        <p class="text-3xl font-bold text-primary mb-1">10 Years</p>
+                        <p class="text-sm text-secondary">Of Amazon Expertise</p>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="inline-block text-accent font-bold tracking-[0.3em] text-xs uppercase mb-4 px-4 py-2 bg-accent/10 rounded-full">Who We Are</span>
+                    <h2 class="text-5xl md:text-6xl font-bold text-primary mb-6">We've Seen <span class="gold-gradient-text font-serif italic">Every</span> Amazon Problem</h2>
+                    <p class="text-xl text-secondary mb-8 leading-relaxed">
+                        For 10 years, we've been the team brands call when Amazon becomes unmanageable. We've handled everything from hostile takeovers to complete channel rebuilds.
+                    </p>
+                    <p class="text-lg text-secondary mb-8 leading-relaxed">
+                        We're not consultants who give advice and disappear. We're operators who take control, fix what's broken, and scale what works. Your Amazon channel becomes our responsibility.
+                    </p>
+
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-users text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary mb-1">Dedicated Team</h4>
+                                <p class="text-sm text-secondary">Each brand gets a dedicated account manager, PPC specialist, and listing optimizer.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-shield-halved text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary mb-1">Brand Protection</h4>
+                                <p class="text-sm text-secondary">Aggressive enforcement against unauthorized sellers and MAP violators.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                            <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-chart-line text-accent text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary mb-1">Proven Systems</h4>
+                                <p class="text-sm text-secondary">Repeatable frameworks that have scaled 16 brands to 7-figure Amazon revenue.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Values -->
+            <div class="bg-gradient-to-br from-primary to-gray-900 rounded-3xl p-16 text-white">
+                <div class="text-center mb-16">
+                    <h3 class="text-4xl font-bold text-white mb-4">How We Work</h3>
+                    <p class="text-xl text-gray-400 max-w-2xl mx-auto">The principles that guide every brand partnership</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-bullseye text-accent text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Results First</h4>
+                        <p class="text-gray-400">We don't get paid unless you see measurable growth. Our success is directly tied to yours.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-comments text-accent text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Radical Transparency</h4>
+                        <p class="text-gray-400">Full access to all data, strategies, and decisions. No black boxes. No hidden tactics.</p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-bolt text-accent text-3xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3">Speed Matters</h4>
+                        <p class="text-gray-400">We move fast. Problems get fixed in days, not weeks. Opportunities don't wait.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="mt-24">
+                <h3 class="text-4xl font-bold text-primary text-center mb-16">Our Journey</h3>
+                <div class="relative">
+                    <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-200 -translate-x-1/2"></div>
+                    
+                    <div class="space-y-16">
+                        <div class="flex items-center gap-8">
+                            <div class="flex-1 text-right">
+                                <h4 class="text-2xl font-bold text-primary mb-2">2016</h4>
+                                <p class="text-secondary">Founded with a single mission: fix broken Amazon channels for legacy brands.</p>
+                            </div>
+                            <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl relative z-10 shrink-0">01</div>
+                            <div class="flex-1"></div>
+                        </div>
+
+                        <div class="flex items-center gap-8">
+                            <div class="flex-1"></div>
+                            <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl relative z-10 shrink-0">02</div>
+                            <div class="flex-1">
+                                <h4 class="text-2xl font-bold text-primary mb-2">2019</h4>
+                                <p class="text-secondary">Scaled first brand from $40k to $280k/month. Developed repeatable systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-8">
+                            <div class="flex-1 text-right">
+                                <h4 class="text-2xl font-bold text-primary mb-2">2022</h4>
+                                <p class="text-secondary">Reached $50M in managed revenue. Expanded team to handle 10+ concurrent brands.</p>
+                            </div>
+                            <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-white font-bold text-xl relative z-10 shrink-0">03</div>
+                            <div class="flex-1"></div>
+                        </div>
+
+                        <div class="flex items-center gap-8">
+                            <div class="flex-1"></div>
+                            <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl relative z-10 shrink-0">04</div>
+                            <div class="flex-1">
+                                <h4 class="text-2xl font-bold text-primary mb-2">2026</h4>
+                                <p class="text-secondary">Managing 16 brands. $70M+ in total revenue. Industry-leading 92% retention rate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - ULTRA MODERN DESIGN -->
+    <section id="contact" class="py-32 bg-gradient-to-br from-gray-50 via-white to-gray-50 w-full max-w-[1440px] mx-auto">
+        <div class="container mx-auto px-8">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block text-accent font-bold tracking-[0.3em] text-xs uppercase mb-4 px-4 py-2 bg-accent/10 rounded-full">Get In Touch</span>
+                    <h2 class="text-5xl md:text-6xl font-bold text-primary mb-6">Let's Talk About <span class="gold-gradient-text font-serif italic">Your</span> Amazon Channel</h2>
+                    <p class="text-xl text-secondary max-w-2xl mx-auto">Book a free 30-minute audit call. No pitch. No pressure. Just honest feedback on what's broken and how to fix it.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-3 bg-white rounded-3xl p-10 shadow-2xl border border-gray-100">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-primary mb-2">First Name *</label>
+                                    <input type="text" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-accent focus:outline-none transition-colors" placeholder="John">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-primary mb-2">Last Name *</label>
+                                    <input type="text" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-accent focus:outline-none transition-colors" placeholder="Smith">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-primary mb-2">Email Address *</label>
+                                <input type="email" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-accent focus:outline-none transition-colors" placeholder="john@yourbrand.com">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-primary mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-accent focus:outline-none transition-colors" placeholder="+1 (555) 000-0000">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-primary mb-2">Current Monthly Amazon Revenue *</label>
+                                <select class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-accent focus:outline-none transition-colors appearance-none bg-white">
+                                    <option>Select range...</option>
+                                    <option>Under $25k/month</option>
+                                    <option>$25k - $50k/month</option>
+                                    <option>$50k - $100k/month</option>
+                                    <option>$100k - $250k/month</option>
+                                    <option>$250k+/month</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-primary mb-2">What's Your Biggest Amazon Challenge? *</label>
+                                <textarea rows="4" class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-accent focus:outline-none transition-colors resize-none" placeholder="Tell us what's keeping you up at night..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-accent hover:bg-accent-muted text-white py-4 px-8 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg shadow-accent/30">
+                                Request Free Audit Call
+                            </button>
+
+                            <p class="text-xs text-gray-400 text-center">We typically respond within 24 hours on business days.</p>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="bg-primary rounded-3xl p-8 text-white">
+                            <h3 class="text-2xl font-bold mb-6">Direct Contact</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-envelope text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 mb-1">Email Us</p>
+                                        <a href="mailto:hello@goldlabelsales.com" class="text-white font-semibold hover:text-accent transition-colors">hello@goldlabelsales.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-phone text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 mb-1">Call Us</p>
+                                        <a href="tel:+15555551234" class="text-white font-semibold hover:text-accent transition-colors">+1 (555) 555-1234</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-4">
+                                    <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-clock text-accent"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 mb-1">Business Hours</p>
+                                        <p class="text-white font-semibold">Mon-Fri: 9AM - 6PM EST</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 pt-8 border-t border-white/10">
+                                <p class="text-sm text-gray-400 mb-4">Connect With Us</p>
+                                <div class="flex gap-3">
+                                    <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-xl flex items-center justify-center transition-colors">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-xl flex items-center justify-center transition-colors">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-xl flex items-center justify-center transition-colors">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-accent/10 rounded-3xl p-8 border-2 border-accent/20">
+                            <h4 class="font-bold text-primary mb-3">What Happens Next?</h4>
+                            <ol class="space-y-3 text-sm text-secondary">
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 bg-accent text-white rounded-full flex items-center justify-center shrink-0 text-xs font-bold">1</span>
+                                    <span>We review your current Amazon setup</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 bg-accent text-white rounded-full flex items-center justify-center shrink-0 text-xs font-bold">2</span>
+                                    <span>30-minute discovery call (no pitch)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 bg-accent text-white rounded-full flex items-center justify-center shrink-0 text-xs font-bold">3</span>
+                                    <span>Detailed audit report with recommendations</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 bg-accent text-white rounded-full flex items-center justify-center shrink-0 text-xs font-bold">4</span>
+                                    <span>If it's a fit, we'll propose next steps</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Quick Links -->
+                <div class="mt-16 bg-white rounded-3xl p-10 border border-gray-100">
+                    <h3 class="text-2xl font-bold text-primary mb-8 text-center">Quick Questions?</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <i class="fa-solid fa-clock text-accent text-2xl mb-3"></i>
+                            <h4 class="font-bold text-primary mb-2">How long to see results?</h4>
+                            <p class="text-sm text-secondary">Most brands see measurable improvement within 60-90 days.</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-dollar-sign text-accent text-2xl mb-3"></i>
+                            <h4 class="font-bold text-primary mb-2">What's the investment?</h4>
+                            <p class="text-sm text-secondary">Depends on model. Ranges from $14,999 one-time to 10-15% of revenue.</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fa-solid fa-handshake text-accent text-2xl mb-3"></i>
+                            <h4 class="font-bold text-primary mb-2">Any long-term contracts?</h4>
+                            <p class="text-sm text-secondary">No. Month-to-month after initial 90-day onboarding period.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For -->
+    <section class="py-24 bg-primary text-white w-full max-w-[1440px] mx-auto">
+        <div class="container mx-auto px-8">
+            <div class="text-center mb-16">
+                <span class="text-accent font-bold tracking-widest text-xs uppercase mb-2 block">Is This You?</span>
+                <h2 class="text-4xl font-bold text-white">This is NOT for Everyone.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <!-- For You -->
+                <div class="bg-white/5 p-8 rounded-lg border border-white/10">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-thumbs-up text-accent"></i> This is for you if:
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                            <span>Your products are already on Amazon (even if it's a mess)</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                            <span>You're doing $25k+/month in revenue somewhere</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                            <span>You're tired of fighting unauthorized sellers</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                            <span>You want to grow Amazon without babysitting it</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                            <span>You're ready to make a decision, not "think about it"</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Not For You -->
+                <div class="bg-transparent p-8 rounded-lg border border-white/5 opacity-70">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-thumbs-down text-gray-500"></i> This is NOT for you if:
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <i class="fa-solid fa-xmark text-gray-600 mt-1"></i>
+                            <span>You're looking for the cheapest option</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <i class="fa-solid fa-xmark text-gray-600 mt-1"></i>
+                            <span>You won't enforce MAP pricing</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <i class="fa-solid fa-xmark text-gray-600 mt-1"></i>
+                            <span>You want to "just run some ads"</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <i class="fa-solid fa-xmark text-gray-600 mt-1"></i>
+                            <span>Amazon isn't a real priority for your business</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-400">
+                            <i class="fa-solid fa-xmark text-gray-600 mt-1"></i>
+                            <span>You need to "run it by" 6 people before deciding</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Offer / Audit -->
+    <section id="audit" class="py-24 bg-bg-light w-full max-w-[1440px] mx-auto">
+        <div class="container mx-auto px-8 max-w-4xl">
+            <div class="bg-white p-12 shadow-2xl rounded-2xl border-t-8 border-accent text-center relative overflow-hidden">
+                <!-- Background decorative elements -->
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full"></div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-accent/10 rounded-full"></div>
+
+                <span class="inline-block bg-accent text-white text-xs font-bold px-3 py-1 rounded-full mb-6">FREE AUDIT</span>
+                
+                <h2 class="text-4xl font-bold text-primary mb-6">
+                    Get Your Free Amazon Channel Audit <br>
+                    <span class="text-gray-400 text-2xl font-normal line-through decoration-red-500 decoration-2">(Normally $599)</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-2xl mx-auto mb-10">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <span class="text-primary font-medium">Complete audit of your current presence</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                        <span class="text-primary font-medium">Identification of every revenue leak</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-list-check"></i></div>
+                        <span class="text-primary font-medium">Specific recommendations</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 shrink-0"><i class="fa-solid fa-handshake-simple-slash"></i></div>
+                        <span class="text-primary font-medium">No pitch. No pressure. Just answers.</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-lg mb-8 border border-gray-100">
+                    <p class="text-secondary italic">
+                        "If we can't find at least <strong>$10,000/year</strong> in missed revenue, we'll tell you. And we'll tell you exactly what you should do instead - even if that's nothing."
+                    </p>
+                </div>
+
+                <button class="bg-accent hover:bg-accent-muted text-white text-lg font-bold px-10 py-5 rounded shadow-lg shadow-accent/30 transition-all transform hover:-translate-y-1">
+                    Request Your Free Audit
+                </button>
+
+                <p class="text-xs text-gray-400 mt-6 flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-clock"></i>
+                    We audit 4 brands per month. If we're booked, we'll let you know.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-white pt-16 pb-8 border-t border-gray-100 w-full max-w-[1440px] mx-auto">
+        <div class="container mx-auto px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <div class="mb-6 md:mb-0">
+                   <div class="h-20 w-auto mb-4">
+                        <!-- Simplified logo for footer -->
+                        <img src="http://leanlivingjourney.com/wp-content/uploads/2026/01/logoee-1.png" alt="Gold Label Sales" class="h-full object-contain">
+                   </div>
+                   <a href="mailto:hello@goldlabelsales.com" class="text-secondary hover:text-accent transition-colors">hello@goldlabelsales.com</a>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-primary font-bold text-lg mb-1">10 Years. 16 Brands. $70M+ Managed.</p>
+                    <div class="flex gap-6 justify-center md:justify-end mt-4">
+                        <a href="#" class="text-gray-400 hover:text-accent"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent"><i class="fa-brands fa-twitter text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                <p>&copy; 2026 Gold Label Sales. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-primary">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script for the Before/After Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('slider-container');
+            const overlay = document.getElementById('slider-overlay');
+            const handle = document.getElementById('slider-handle');
+            let isDragging = false;
+
+            if(container && overlay && handle) {
+                const updateSlider = (x) => {
+                    const rect = container.getBoundingClientRect();
+                    let position = ((x - rect.left) / rect.width) * 100;
+                    
+                    // Constrain between 0 and 100
+                    position = Math.max(0, Math.min(100, position));
+                    
+                    overlay.style.width = `${position}%`;
+                    handle.style.left = `${position}%`;
+                };
+
+                container.addEventListener('mousedown', () => isDragging = true);
+                window.addEventListener('mouseup', () => isDragging = false);
+                window.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    updateSlider(e.clientX);
+                });
+                
+                // Touch support
+                container.addEventListener('touchstart', () => isDragging = true);
+                window.addEventListener('touchend', () => isDragging = false);
+                window.addEventListener('touchmove', (e) => {
+                    if (!isDragging) return;
+                    updateSlider(e.touches[0].clientX);
+                });
+                
+                // Initial set to 50%
+                overlay.style.width = '50%';
+                handle.style.left = '50%';
+            }
+        });
+    </script>
+</body>
+</html>
